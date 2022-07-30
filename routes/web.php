@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PenjualanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('datapenjualan');
+    return view('index');
 });
+
+Route::get('/datapenjualan', [PenjualanController::class, 'index'])->name('datapenjualan');
